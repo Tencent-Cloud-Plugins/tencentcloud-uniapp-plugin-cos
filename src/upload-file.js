@@ -25,27 +25,20 @@ import { getMediaType } from './utils';
  * @param {function?} onProgressUpdate - 上传进度回调，回调参数详见uni.uploadFile API
  * @return {Promise<string>} 返回成功上传到COS上的文件名称
  */
-export default function uploadFile(file, key, onProgressUpdate) {
-  return new Promise(async (resolve, reject) => {
-    if (!file) {
-      reject(new Error('file不能为空'));
-      return;
-    }
-    // 获取签名信息
-    let signData = undefined;
-    try {
-      const { result } = await uniCloud.callFunction({
-        name: 'tencentcloud-plugin',
-        data: {
-          module: 'COS',
-          action: 'signPostObjectAPI',
-        },
-      });
-      signData = result;
-    } catch (error) {
-      reject(error);
-      return;
-    }
+export default async function uploadFile(file, key, onProgressUpdate) {
+  if (!file) {
+    throw new Error('file不能为空');
+  }
+  // 获取签名信息
+  const { result } = await uniCloud.callFunction({
+    name: 'tencentcloud-plugin',
+    data: {
+      module: 'COS',
+      action: 'signPostObjectAPI',
+    },
+  });
+  const signData = result;
+  return new Promise((resolve, reject) => {
     let filePath = undefined;
     let fileExt;
     if (typeof file === 'string') {

@@ -20,20 +20,14 @@
  * @param {string} key - 腾讯云COS上的文件名称
  * @return {Promise<string>} 腾讯云COS文件key的访问地址
  */
-export default function getFileAccessUrl(key) {
-  return new Promise(async (resolve, reject) => {
-    try {
-      const { result } = await uniCloud.callFunction({
-        name: 'tencentcloud-plugin',
-        data: {
-          module: 'COS',
-          action: 'getObjectURL',
-          key,
-        },
-      });
-      resolve(result);
-    } catch (error) {
-      reject(error);
-    }
+export default async function getFileAccessUrl(key) {
+  const { result } = await uniCloud.callFunction({
+    name: 'tencentcloud-plugin',
+    data: {
+      module: 'COS',
+      action: 'getObjectURL',
+      key,
+    },
   });
+  return result;
 };
