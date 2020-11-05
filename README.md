@@ -5,18 +5,19 @@
 | ----     | ---------------- |
 | 中文名称   | 腾讯云对象存储（COS）插件 |
 | 英文名称   | tencentcloud-plugin-cos |
-| 最新版本   | v1.0.4 (2020.07.22) |
+| 最新版本   | v1.0.6 (2020.11.05) |
 | 适用平台   | [DCloud uni-app](https://uniapp.dcloud.net.cn) |
 | 适用产品   | [腾讯云对象存储（COS）](https://cloud.tencent.com/product/cos) |
 | GitHub项目| [tencentcloud-uniapp-plugin-cos](https://github.com/Tencent-Cloud-Plugins/tencentcloud-uniapp-plugin-cos) |
 | 主创团队   | 腾讯云中小企业产品中心（SMB Product Center of Tencent Cloud） |
+| 兼容平台   | H5、小程序、APP |
 
 一款帮助开发者在uni-app项目开发中快捷使用腾讯云对象存储（COS）产品功能的插件。
 
 ## 2. 功能特性
 
-- 上传图片、视频等文件到腾讯云COS
-- 选择自定义类型文件功能（仅支持H5平台）
+- 上传图片、视频等文件到腾讯云COS(支持H5、小程序、APP)
+- 选择自定义类型文件功能（仅支持H5平台, APP端可使用[选择文件原生插件](https://ext.dcloud.net.cn/search?q=%E6%96%87%E4%BB%B6%E9%80%89%E6%8B%A9&cat1=5)）
 - 获取腾讯云COS私有读文件的临时访问链接
 
 ## 3. 安装指引
@@ -123,34 +124,46 @@ export default {
 | ----     | ---------------- |
 | DCloud插件市场 | [腾讯云对象存储（COS）插件](https://ext.dcloud.net.cn/plugin?id=2137) |
 
-## 6. GitHub版本迭代记录
+## 6. FAQ
+> 暂无
+>
 
-### 6.1. tencentcloud-uniapp-plugin-cos v1.0.4
+## 7. GitHub版本迭代记录
+
+### 7.1. tencentcloud-uniapp-plugin-cos v1.0.6
 
 - 代码优化
 
-### 6.2. tencentcloud-uniapp-plugin-cos v1.0.3
+### 7.2. tencentcloud-uniapp-plugin-cos v1.0.6
+
+- 代码优化
+
+### 7.3. tencentcloud-uniapp-plugin-cos v1.0.4
+
+- 代码优化
+
+### 7.4. tencentcloud-uniapp-plugin-cos v1.0.3
 
 - 插件名称优化
 - 代码优化
 
-### 6.3. tencentcloud-uniapp-plugin-cos v1.0.2
+### 7.5. tencentcloud-uniapp-plugin-cos v1.0.2
 
 - 修复插件导入时目录层级重复问题
 
-### 6.4. tencentcloud-uniapp-plugin-cos v1.0.1
+### 7.6. tencentcloud-uniapp-plugin-cos v1.0.1
 
 - 新增上传图片、视频等文件到腾讯云COS功能
 - 新增选择自定义类型文件功能（仅支持H5平台）
 - 新增获取腾讯云COS私有读文件临时访问链接的功能
 
-### 6.5. tencentcloud-uniapp-plugin-cos v1.0.0
+### 7.7. tencentcloud-uniapp-plugin-cos v1.0.0
 
 - 新增上传图片、视频等文件到腾讯云COS功能
 - 新增选择自定义类型文件功能（仅支持H5平台）
 - 新增获取腾讯云COS私有读文件临时访问链接的功能
 
-## 7. 联系我们
+## 8. 联系我们
 
 &nbsp;&nbsp;&nbsp;扫码备注“春雨”来联络到我们</br>
-![](./images/qrcode.png)
+![](../images/qrcode.png)

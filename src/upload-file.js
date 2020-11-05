@@ -79,7 +79,7 @@ export default async function uploadFile(file, key, onProgressUpdate) {
         'policy': signData.policy
       },
       success(response) {
-        if (+response.statusCode !== 204) {
+        if (response.statusCode !== 204) {
           reject(new Error('文件上传失败'));
         } else {
           resolve(key);
@@ -87,7 +87,7 @@ export default async function uploadFile(file, key, onProgressUpdate) {
       },
       fail(error) {
         // 支付宝小程序环境下会将返回的204状态码识别为异常而触发fail回调，实际上是上传成功了的
-        if (+error.statusCode === 204) {
+        if (error.statusCode === 204) {
           resolve(key);
         } else {
           reject(error);
