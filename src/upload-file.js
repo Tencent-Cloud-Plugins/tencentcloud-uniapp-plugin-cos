@@ -65,7 +65,8 @@ export default async function uploadFile(file, key, onProgressUpdate) {
       key = `${UUID.v1()}.${fileExt}`;
     }
     const uploadTask = uni.uploadFile({
-      url: signData.host,
+      // 增加 channel-id 参数，用于统计
+      url: signData.host + '?x-cos-channel-id=tencentcloud-uniapp-plugin-cos',
       file,
       filePath,
       fileType,
